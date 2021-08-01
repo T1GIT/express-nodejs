@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const path = require('path')
 const handlebars = require('express-handlebars')
 const todoRouter = require('./routes/todo')
+const { DB_USERNAME, DB_PASSWORD } = require('./environment')
 
 const PORT = process.env.PORT || 8080
 
@@ -24,7 +25,7 @@ app.use(todoRouter)
 async function start() {
     try {
         await mongoose.connect(
-            'mongodb+srv://T1MON:330230@express-nodejs.jk9vv.mongodb.net/myFirstDatabase',
+            `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@express-nodejs.jk9vv.mongodb.net/myFirstDatabase`,
             {
                 useNewUrlParser: true,
                 useFindAndModify: false
