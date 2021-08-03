@@ -25,7 +25,7 @@ app.use(todoRouter)
 async function start() {
     try {
         await mongoose.connect(
-            `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@express-nodejs.jk9vv.mongodb.net/myFirstDatabase`,
+            `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@express-nodejs.jk9vv.mongodb.net/express-nodejs`,
             {
                 useNewUrlParser: true,
                 useFindAndModify: false
