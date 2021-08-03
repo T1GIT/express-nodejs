@@ -5,4 +5,4 @@ const schema = new Schema({
     completed: { type: Boolean, default: false }
 })
 
-module.exports = model('Todo', schema)
+module.exports = model('todos', schema)
